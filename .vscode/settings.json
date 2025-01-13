@@ -1,0 +1,10 @@
+{
+  "json.schemas": [
+    {
+        "fileMatch": [
+            "./resume.js"
+        ],
+        "url": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json"
+    }
+  ]
+}

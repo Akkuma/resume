@@ -1,0 +1,24 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "json": "pnpx vite-node json.js",
+    "render": "pnpx vite-node index.js",
+    "pdf": "pnpm render && node pdf.js",
+    "validate": "pnpm json && resumed validate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@kurone-kito/jsonresume-types": "^0.4.0",
+    "jsonresume-theme-stackoverflow": "^2.0.2",
+    "@akkuma/jsonresume-theme-stackoverflow": "file:./theme",
+    "playwright": "^1.34.2",
+    "resumed": "^3.0.1"
+  }
+}

@@ -1,0 +1,1391 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Gregory Waxman</title>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=fira-code:400" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+  font-size: 13px;
+  color: #40484f;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+}
+
+:root { font-family: 'Inter', sans-serif; }
+
+code {
+  font-family: 'Fira Code', monospace;
+}
+
+p {
+  display: block;
+}
+
+a {
+  color: #0095ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0c65a5;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 1.3em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.67rem;
+}
+
+h3 {
+  font-size: 1.27rem;
+}
+
+em {
+  color: #757575;
+}
+
+blockquote {
+  margin-bottom: 1em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* main container */
+
+#resume {
+  padding: 1.5rem;
+}
+
+/* every section wrapper */
+
+.section {
+  margin-bottom: 1rem;
+}
+
+section .location {
+  margin-right: 0.5em;
+  color: #606d76;
+  font-weight: 700;
+}
+
+#contact {
+  margin-top: 0.5rem;
+}
+
+#profiles .item {
+  padding: 0;
+}
+
+#profiles .url-link > .url {
+  display: none;
+}
+
+#header > #profiles,
+#header > #contact,
+#skills,
+#languages,
+#interests {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+#header > div {
+  line-height: 1.5;
+}
+
+#header > div > div {
+  margin-right: 1.2em;
+}
+
+#header h1.name {
+  font-size: 2.8rem;
+  font-weight: 100;
+  line-height: 100%;
+}
+
+#header h2.label {
+  color: #202931;
+  font-size: 1.47rem;
+  font-weight: 300;
+}
+
+#header .image {
+  width: 11em;
+  float: right;
+  border-radius: 4px;
+}
+
+.main-summary {
+  background: #f1f8ff;
+  padding: 1.2em 1em;
+  margin-top: 1rem;
+}
+
+.main-summary p {
+  margin: 0;
+}
+
+.section-title {
+  display: inline-block;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.section > header {
+  position: relative;
+}
+
+.fa {
+  margin-right: 0.25em;
+}
+
+.section > header::after {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 1px;
+  background: #ccc;
+  content: "";
+  width: 100%;
+  z-index: -100;
+  display: block;
+}
+
+.section.main-summary > section {
+  margin: 0;
+}
+
+.section > section > header {
+  font-size: 1.38rem;
+  position: relative;
+  margin-top: 0.7em;
+}
+
+.section > section > header:first-of-type {
+  margin: 0;
+}
+
+.section > section > header .space-left {
+  position: absolute;
+  left: -1.56rem;
+  top: 5px;
+  color: #aaa;
+  line-height: 1;
+  opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+  display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+  font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+  content: "at ";
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+  color: #606d76;
+  font-weight: 400;
+}
+
+.section header .date {
+  display: block;
+  font-size: 1rem;
+  padding: 0.1em 0;
+  color: #606d76;
+  font-weight: 400;
+}
+
+.work-item .date {
+  float: right;
+}
+
+.work-item .logo {
+  width: 1rem;
+  height: 1rem;
+}
+
+.keywords,
+.courses {
+  margin: 0.5em 0;
+}
+
+.keywords li,
+.courses li {
+  display: inline-block;
+  margin: 2px 2px 2px 0;
+  padding: 4px 5px 5px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #3e6d8e;
+  background-color: #dfeaf1;
+  border: 0 solid #dfeaf1;
+  white-space: nowrap;
+}
+
+.keywords li:hover,
+.courses li:hover {
+  background: #dfeaf0;
+}
+
+.highlights {
+  margin: 1em 0 0 0;
+}
+
+.highlights > li > p {
+  margin-bottom: 0.5em;
+}
+
+.item {
+  overflow: hidden;
+}
+
+.gpa {
+  clear: both;
+  padding-bottom: 0.5em;
+}
+
+.fa.social {
+  font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+
+.google-plus {
+  color: #dd4b39;
+}
+
+.tumblr {
+  color: #32506d;
+}
+
+.foursquare {
+  color: #0072b1;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.linkedin {
+  color: #007bb6;
+}
+
+.pinterest {
+  color: #cb2027;
+}
+
+.dribbble {
+  color: #ea4c89;
+}
+
+.instagram {
+  color: #517fa4;
+}
+
+.twitter {
+  color: #00aced;
+}
+
+.soundcloud {
+  color: #ff3a00;
+}
+
+.wordpress {
+  color: #21759b;
+}
+
+.youtube {
+  color: #bb0000;
+}
+
+.github {
+  color: #171515;
+}
+
+.stack-overflow {
+  color: #828386;
+  position: relative;
+}
+
+.flickr {
+  color: #ff0084;
+}
+
+.reddit {
+  color: #ff4500;
+}
+
+.hacker-news {
+  color: #ff6600;
+}
+
+.stack-overflow::after {
+  position: absolute;
+  left: 0;
+  content: "\f16c";
+  color: #f68a1f;
+  overflow: hidden;
+  height: 100%;
+}
+
+.telegram {
+  color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+  width: 15em;
+  padding: 0 0.5em 0.5em 0;
+  border-bottom: none;
+}
+
+#skills .item {
+  width: 16em;
+}
+
+#skills .item .keywords {
+  width: 15em;
+}
+
+/* Skill chart */
+
+.level {
+  margin-bottom: 0.5em;
+}
+
+.level em {
+  padding-left: 0.2em;
+}
+
+.level .bar {
+  border: 1px solid #ddd;
+  display: block;
+  width: 10em;
+  height: 5px;
+  position: relative;
+}
+
+.level .bar::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  background: black;
+  height: 5px;
+}
+
+.level.beginner .bar::after {
+  background: #eb5f51;
+  width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+  background: #ffdf1f;
+  width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after {
+  background: #5cb85c;
+  width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after {
+  background: #59c596;
+  width: 10em;
+}
+
+#references .item {
+  padding-left: 0.5em;
+  border-left: 5px solid #ff6d1f;
+}
+
+.section > section > section {
+  margin-bottom: 1rem;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.display {
+  display: block;
+  opacity: 1 !important;
+}
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+  #resume {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section header .date {
+    float: right;
+    font-weight: 600;
+    color: #000;
+  }
+}
+
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+  li {
+    margin-left: 1.5em;
+  }
+  #resume {
+    width: 820px;
+    margin: 2rem auto;
+  }
+  .section > section > header .space-left {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .section > section:not(.main-summary) {
+    margin-left: 1.67rem;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "| ";
+  }
+  .header-left {
+    float: left;
+    width: 70%;
+    word-break: normal;
+  }
+  .section header .date {
+    padding: 0.2em;
+  }
+  .display {
+    display: none;
+  }
+  .display:not(.none) {
+    display: block;
+  }
+}
+
+@media print {
+  :root {
+    font-family: 'Inter';
+  }
+  #profiles .url-link > .url {
+    display: unset;
+  }
+  #profiles .url-link > .username {
+    display: none;
+  }
+
+  .work-item .keywords, .work-item header, .wprk-item .url {
+    break-after: avoid;
+  }
+
+  #resume {
+    margin: 0.1em;
+    padding: 0.1em;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.25;
+  }
+  @page {
+    margin: 1cm 1.4cm;
+  }
+  .item-count {
+    display: none;
+  }
+  .company::before,
+  .institution::before {
+    content: "| ";
+
+  }
+  .organization::before,
+  .awarder::before {
+    content: "at ";
+  }
+  .main-summary {
+    padding: 0;
+    background: transparent;
+  }
+  .section {
+    margin: 0.8rem 0;
+    padding: 0;
+  }
+  .section header {
+    padding-bottom: 0.15rem;
+  }
+  .section .location {
+    padding-bottom: 0.15rem;
+  }
+  .section > section > section {
+    margin: 0 0 1em 0;
+  }
+  .section > section > section:last-of-type {
+    margin: 0;
+  }
+  .stack-overflow::after {
+    content: "";
+  }
+  .fa.social {
+    color: #828386;
+  }
+  ul {
+    margin-top: 0.4em;
+  }
+  ul,
+  li {
+    padding: 0;
+  }
+  ul.keywords li,
+  ul.courses li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    background: transparent;
+  }
+  ul.keywords li::after,
+  ul.courses li::after {
+    padding: 0 0 0 0.1rem;
+    content: " |";
+  }
+  ul.keywords::before,
+  ul.courses::before {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  #skills .item {
+    width: calc(100% / 3);
+    padding: 0;
+  }
+  .highlights {
+    margin: 0.5em 0 0 0;
+  }
+  ul.keywords::before {
+    content: "Tech: ";
+  }
+  #skills .keywords::before {
+    content: none;
+  }
+  #skills ul.keywords {
+    margin: 0.3rem 0 0.5rem 0;
+  }
+  .section p {
+    margin: 0;
+    padding: 0;
+  }
+  ul.courses::before {
+    content: "Major courses: ";
+  }
+  ul.keywords li:last-of-type::after,
+  ul.courses li:last-of-type::after {
+    content: "";
+  }
+  .level em {
+    font-style: normal;
+    padding: 0.1em 0;
+  }
+  .level .bar {
+    display: none;
+  }
+  #profiles .item {
+    padding: 0;
+  }
+  .item.display {
+    display: block;
+    opacity: 1 !important;
+  }
+  .fa-map-marker-alt:before {
+    padding-left: 0.1em;
+  }
+}
+
+  </style>
+  
+  </head>
+  <body>
+  
+  <div id="resume">
+    	<header id="header" class="clear">
+    		<div>
+    			<h1 class="name">Gregory Waxman</h1>
+    			<h2 class="label">Leader &amp; full stack engineer with over 17 years of professional experience</h2>
+    		</div>
+    
+    		<span class="location">
+    			<span class="address">South Carolina,</span>
+    			<span class="countryCode">US</span>
+    		</span>
+    
+    
+    		<div id="contact">
+    			<div class="email">
+    				<span class="far fa-envelope"></span>
+    				<a class="hide-href-print" href="mailto:gregorywaxman+resume@gmail.com">gregorywaxman+resume@gmail.com</a>
+    			</div>
+    		</div>
+    
+    		<div id="profiles">
+    			<div class="item">
+    				<div class="network">
+    					<span class="fab fa-linkedin linkedin social"></span>
+    						<a class="url-link" target="_blank" href="https://www.linkedin.com/in/greg-can-think"><span class="username">greg-can-think</span><span class="url">linkedin.com/in/greg-can-think</span></a>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="network">
+    					<span class="fab fa-github github social"></span>
+    						<a class="url-link" target="_blank" href="https://github.com/Akkuma"><span class="username">Akkuma</span><span class="url">github.com/Akkuma</span></a>
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+    
+    
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Work Experience</h2>
+      </header>
+    
+      <section id="work">
+        <section class="work-item">
+    
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Aug 2023</span>
+                <span class="endDate">- Current</span>
+              </div>
+              <div class="position">Principal Software Engineer</div>
+                <div class="company">Bison Technologies</div>
+            </header>
+    
+            <span class="location">
+              <span class="fas fa-map-marker-alt"></span>
+                <span class="location">Remote</span>
+            </span>
+          <span class="url">
+              <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAyBJREFUOE9VU0tME0EYnmnZPoTWVh4RjAGKCT7QcIHGSiJEgweDQrUkBfpSax8kUGj0YCRGJWrASmqiVhKF0loiRMCIJw5GEw8qB4lG5IKADyzYdmuB3VLaNbMPjbvJ7uzOfP//zfd9AwEAAAIIKDSgxxQ4bT5jipPknaKiHYdn5+bOx6LRmi052cce3O99DiEEgKIABQFAD3QDhNYZ9O6iQsXjzzMz1wUiYSRdJHrpuefpsdisbcHF4M1EMsGTZEheKZXK+vdTU139fX0GhEX1gNVma4rguHlbXq5+dZVQx+NEaVXVIbtBr1tFzHQ63dUIHrkIKQhkclknEY9bpXKZ8SFihKro9AZ3JBxuEQhF0znZWdei0WjnYCBQQHegAGg0GNzRUKiFj2GpvNxc+8LXBY9cJu/0+XwdNANLS2vJty+zH9Be0ITf7+tA27I32y2pZGrTfpWq99n4+BxBrGVlZmY9DYVCx7crFHs97tsfEZ6+7M3NlsUf3+9WHqzMa3W0BZGYeqNxLEWl5gf6vecaGrQTFORPY3zeMlrv8/k7UEOmAATA2d6eHw6Hrwil0u7Q4s8XQoHAc6S6+sbryclC3sbGAYIgVDiON6VhWLhCpSpBTVgojadt1BtNYz5vXy2y59RZ89F9e3ZPOlodwdq6uqRMJvOTBFlAxsmKOrVaqtfpVukCrK00EW1Dw5yyvFzpcDiCTqcz/5bLNY8KqzWaTwmS2IXGEsnm+cHAowKuKasB89I2aj0YJtg60N9fS1GUAEK4juhRSUqgPqEm0JqRJyNiHg+uM0FiQshc6AMCYDSYvEKppBskEqVrJHkyhuM16ekZ8WgUF4vE4l/DQ8PZSOB/yUU1IPuDgqDd2Z6/tBSchgC6VlZiFzY2kjy0GEtLSykUhQqXq2eeUYwJyd8oc4rSU4iJ0eTlYdgQTKVy8N+xLpFYFPB7va00jmXMwVkX2NixO7JZrU3FxTsn3rx7e5lcI8yjo6N8znLmEDGs/2PwHwvmsAGNpn5ZJBYHfGx3Ti+uGB1lRhCWAacOy0Tb2OhRlpVdQtYylnPZYxj8AZv+VChCOS8eAAAAAElFTkSuQmCC" />
+            <a target="_blank" href="https://bisonpayments.com">bisonpayments.com</a>
+          </span>
+          <ul class="keywords">
+            <li>aws lambda</li>
+            <li>appsync</li>
+            <li>dynamodb</li>
+            <li>graphql</li>
+            <li>react</li>
+            <li>tailwind</li>
+            <li>node.js</li>
+            <li>shadcn/ui</li>
+            <li>storybook</li>
+            <li>typescript</li>
+            <li>valtio</li>
+            <li>vite</li>
+            <li>vitest</li>
+          </ul>
+          <div class="item" id="work-item">
+            <ul class="highlights">
+              <li><p><p>Mentored the engineering team across multiple areas such as React, TypeScript, and GraphQL</p></p></li>
+              <li><p><p>Led a team of 3 engineers helping to reduce the load for the head of engineering</p></p></li>
+              <li><p><p>Created multiple ADRs for improving and unifying our frontend tech stack</p></p></li>
+              <li><p><p>Improved lambda development by reducing boilerplate, improving security, and adding functionality</p></p></li>
+              <li><p><p>Improved DX for engineers by introducing better tools and improving their configuration</p></p></li>
+              <li><p><p>Led development of our UI library based on <code>shadcn/ui</code></p></p></li>
+              <li><p><p>Dramatically improved CI, ~50% speed up and ~50% cost reduction</p></p></li>
+              <li><p><p>Built, altered, and maintained GitHub Actions</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Feb 2022</span>
+                <span class="endDate">- Aug 2023</span>
+              </div>
+              <div class="position">Staff Software Engineer</div>
+                <div class="company">Intellimize</div>
+            </header>
+    
+            <span class="location">
+              <span class="fas fa-map-marker-alt"></span>
+                <span class="location">Remote</span>
+            </span>
+          <span class="url">
+              <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAaxJREFUOE9VU7uVnEAQrFpDsKYeBKIk4AKANM67MGSdpxwggGWDOENpLHJh5ZRefxhWGLyZnunq6uoa4vgIQABhC1vqPKLt/ReX7tUHur8/M/qKAICZKMbaQC3X9gZz+/apy+Ud3e6V6IelVuaU3GNxJFef4OVd1Ip+b4OxwwSzc5kJGZCd3asviD8ixFX91loek18kO9UXQMcheK8HCdNZRyv7ZwIk/XL4wqaos1wHQJNVkFdAtJC1so/owlks1QeE3+yfN485AxYGpFZ1CWBjC4EFLtdB0C+SjaAR3T67SB7HlCWcAfutPQoG06X6Ei4hUkxmZLfP7oelHghOOclsYWvDNTEH4Hb9A+B76maMRr7tc0zgOkCYQnU70oq3vTWbuA+8+aV+CGi8JadhLTxn2+leDxCn03Lhg9KC2/RePSg25r503Yh+n53mUg+iJhcrKKywMYbB81vqB4jmtCVH9NvsN2yM1kLMyRBeAbIHA4AxKJAj++1/DY50s/IxxiLMzQDQxOMQRI7oNh+jXEQzUnlf7kSbULwou5QMDk1JjLIWXOB04vloihP/Ad+j6xcEmFhQAAAAAElFTkSuQmCC" />
+            <a target="_blank" href="https://intellimize.com">intellimize.com</a>
+          </span>
+          <ul class="keywords">
+            <li>node.js</li>
+            <li>eslint</li>
+            <li>javascript</li>
+            <li>typescript</li>
+            <li>valtio</li>
+            <li>express.js</li>
+            <li>react</li>
+            <li>aws</li>
+            <li>mongodb</li>
+            <li>vite</li>
+            <li>vitest</li>
+          </ul>
+          <div class="item" id="work-item">
+            <ul class="highlights">
+              <li><p><p>Revamped the entire frontend, resulting in a 75% reduction in load time and significant productivity enhancements</p></p></li>
+              <li><p><p>Upgraded all tooling replacing previous unmaintained and outdated tooling</p></p></li>
+              <li><p><p>Led and guided the development of Rules Based Personalization</p></p></li>
+              <li><p><p>Created and built fully functioning CI/CD pipelines to streamline development and deployment processes</p></p></li>
+              <li><p><p>Successfully learned, built, and maintained Cloudfront usage for frontend and API</p></p></li>
+              <li><p><p>Provided team leadership by offering guidance on solutions, mentoring team members, &amp; inspiring others</p></p></li>
+              <li><p><p>Developed a Shopify app integration leading to two customer sales within the first two months</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+            <label for="work-item-2"></label>
+    
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Apr 2021</span>
+                <span class="endDate">- Feb 2022</span>
+              </div>
+              <div class="position">Senior Software Engineer</div>
+                <div class="company">Bubbles</div>
+            </header>
+    
+            <span class="location">
+              <span class="fas fa-map-marker-alt"></span>
+                <span class="location">Remote</span>
+            </span>
+          <span class="url">
+              <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAmNJREFUOE9lk01IVFEUx3/3jcw8CyO1soXSF1QkRgoFaWYhWFCBWZAFgWAucje06GtXjotaZIvamLVo4aLUVfRJMWITSGERKRV9YVAUoybYzHOce+Pedydn6i4ej3vOued//v//Efx3BAKFAgSg9Fco/ZN7/KDJQSllK3SiLvCDNppVaNJzYvMP/NMgGpvj4RPJ6Me0QbFhjaChzqGuJi/rgUwPqQxSfSYm4VB7kjefJFXrBFsrA+b+2YjkxVtJxSqH3qsuRYV+sUUgzTTxSUV1U4LSEoeei0FWljk5uD6PS1rCHt/iklj/QooWZ3GgRz7QmuDrDxi8nY8bsqwpTalNFIqkB9sPepQug/4ed57EwadzNJ+Y5U63S2VFVmelwdn5LH8vX6fZ0+Zx63IIrRlSKtXZNcvdaJqhgXytiqnRxOQI4ktm4Gxr8ti705lHcCzsUbIUImeCPmArvd/cypthRMDJDo/J6SwSW8OzLF8CkbMhU+DLohDGF5YF3V3bTChOd6T4GTcYBUpKFbnk8WBIEu1ziXSleP4qzcB117bQrbPIRFGz32NfvT+iceLwSJrG4x6Pb4YoKBBsbkxStd6hrTnAxvKAkTRD5dh7Sf3RhCE8x4lNrUmmZ+BRr8vElOJUZ4ob91K07M6j+0LQoEl6gl1HEhQXCvqvhfQAAimlGdk30m8WFThcORdky6aMnD782LAkfN7j14wi1reAYutGpJLKTKMgPqU43J7k3bhiRYlDQ63/iObny3fJ2jJhrKwR+MxktjGzZnYbtbHuR9OMfZBmQctXOzTsCFBbnfeXC13yB4UDFtU8a7LbAAAAAElFTkSuQmCC" />
+            <a target="_blank" href="https://usebubbles.com">usebubbles.com</a>
+          </span>
+          <ul class="keywords">
+            <li>aws</li>
+            <li>javascript</li>
+            <li>node.js</li>
+            <li>react</li>
+            <li>redux</li>
+            <li>serverless</li>
+            <li>typescript</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p><p>First of three engineering hires</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Reduced CI test time by more than 60%, leading to faster development and testing cycles</p></p></li>
+              <li><p><p>Enhanced monorepo webpack integration and implemented fast refresh for improved development experience</p></p></li>
+              <li><p><p>Simplified environment setup by automating AWS environment output usage</p></p></li>
+              <li><p><p>Improved component structure, variation, and implementations for better code organization and reusability</p></p></li>
+              <li><p><p>Led development on image, video, and face recording functionality over the span of six months</p></p></li>
+              <li><p><p>Conducted code reviews, ideation for technical improvements, and interviews</p></p></li>
+              <li><p><p>Managed very large code merges and conflicts across features</p></p></li>
+              <li><p><p>Provided leadership guidance and feedback, ranging from culture to roadmap</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Aug 2020</span>
+                <span class="endDate">- Apr 2021</span>
+              </div>
+              <div class="position">Senior Software Engineer</div>
+                <div class="company">HubTran (acquired by TriumphPay)</div>
+            </header>
+    
+            <span class="location">
+              <span class="fas fa-map-marker-alt"></span>
+                <span class="location">Remote</span>
+            </span>
+          <ul class="keywords">
+            <li>elm</li>
+            <li>react</li>
+            <li>ruby</li>
+            <li>rails</li>
+            <li>postgres</li>
+          </ul>
+          <div class="item" id="work-item">
+            <ul class="highlights">
+              <li><p><p>Reduced Pusher usage leading to over a 50% cost reduction, 80% reduction in scripting time, 66% to 93% reduction in total messages sent, and 98% reduction in React renders</p></p></li>
+              <li><p><p>Decreased total delivered JavaScript size by 50% for improved website performance</p></p></li>
+              <li><p><p>Successfully migrated IDs from audit tables from int to bigint with no downtime, ensuring uninterrupted operations</p></p></li>
+              <li><p><p>Updated project tooling from Webpack v1 to Webpack v5, alongside multiple Docker enhancements</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+            <label for="work-item-4"></label>
+    
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">May 2018</span>
+                <span class="endDate">- Apr 2019</span>
+              </div>
+              <div class="position">Senior Software Engineer</div>
+                <div class="company">Gush</div>
+            </header>
+    
+            <span class="location">
+              <span class="fas fa-map-marker-alt"></span>
+                <span class="location">Remote</span>
+            </span>
+          <span class="url">
+              <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAzdJREFUOE9NU2swlFEYfs5HibXYolgTalgmJvtDY7pM0rjMmCZU419NDV2mJJP8KFHGH11GYqKicmumkjZLaUVRrUITLWM2i2ZbVmpZl7SzZL/mfJ9VZ+Y73znnPec57/uc5yFYbIQALAuAAPCQuD4qvJbk4y3e6SgQiMxm85xmUFuXsHdXLg3TbbTRMf1AQMDSZULw8HFdaUzk9kRHodCKzf0H1RrUJ5ycTu1VuBOWmFjCckgcAO3p/EHNs9KEPTGJNJW+1jYMKVq5sNfuSIv+YjEDtKH1u+fEJcOwP6vvN1iPcqePn8iOKsjPUDA2Nmg+lom5zheYFU1jfMIG2iELVolZ0wr7lfYvnUPR7OrUMludE/4PAEBXt0opDQ7aopIr8C03Byb7n3j1XYplO4IhCQ1CgJ83tMp2pL/Xm4xPsleBwESzXuJAN6xfEHuuYZqPZuGPthqP1RIMx4WjIT8VhKU1AqpaBRrPppjSp+AFWgJd5lglIMZxo8XFxQVNxzKh6aiBQhSFiQCx8mbCtq2U9cCwzVDJG/E19zRKzdIf9WMfA4leY+ABQDA8MrLgKXZn3hVVorc0F8Xr9kElyyGExdprKafUp67nO/S9boPm3BEU2+2AQmAbRhoK3vC5gUXX5x5l8MbALazFgpyoeFwdc/4921slEIfESxsrL93f4O+3oa+FAhxGOQmFTCQMw/PCfwCem+KkPYq7XSKRiHvfoS8DsBMKLO4eaxgbwnAv9e5GBYxVJbhHJJC5ucVCfkW+lAFlI/XE+biTyQdk6yW+VoVArx+1GDpVzEjRAyxM98PWyYDbM1shc1sdC/llOeFo5CTMK6vkVvnFxMP7LyiLKvCtuhYuMzrML/+NeYcFjE6uRJ/ZCx+CgqCdMx4yyvLKeCVyiuDNUN/0NttJPZg1VVXC3daq88UkI4DezQO61a4YEjrOMOO6lMmneWX/KZEOeYv4RB/0iVb1J0cEjKd9GvVFvXQbelbYtjv+mVc6qzsqRzqfdi/yzt3JC2nRif87bY93WMlAyPakrw72eb8qM9J4s/GioeXSijkhLfnSGl+yKiFOEYlnppruXLHyY3Wu1YZUP38BpYpVMiM0iG4AAAAASUVORK5CYII&#x3D;" />
+            <a target="_blank" href="https://gush.com">gush.com</a>
+          </span>
+          <ul class="keywords">
+            <li>python</li>
+            <li>react</li>
+            <li>trio</li>
+            <li>redux</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p><p>First engineering hire</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Led all frontend development</p></p></li>
+              <li><p><p>Rapidly learnt basic Python including leveraging Trio to combine data from Google, Yelp, &amp; Foursquare</p></p></li>
+              <li><p><p>Created a basic agile-like process to centralize and organize development</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Jun 2015</span>
+                <span class="endDate">- Apr 2018</span>
+              </div>
+              <div class="position">Senior Software Engineer</div>
+                <div class="company">Virtru</div>
+            </header>
+    
+            <span class="location">
+              <span class="fas fa-map-marker-alt"></span>
+                <span class="location">Remote</span>
+            </span>
+          <span class="url">
+              <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAolJREFUOE9VU89P1GAQfbP9FiFLgCucVuNBE40EE4ks8B/Qbt2EKImJXjwAmniVNkC2e/cA+ycIMYH9wcUzPzREXWPCRWMCF+EKuhvQtjtm+rUb/A79mnbmzZv3ZggACABHT6DngZP7E/J8CpgCKANmCWgxaKvLwMr5ZnGPCGAmEElWlC0Xw7CcbQAT4AjrBKB9REEY9f1gcPLOMG7dHv5Qnrk5JvHyQ8Cio0y3ycQZEBq9UIXT6tKRZqf59dtL2aePn7zzg+CafF2dvt6leROQNqUyTYRol9v10hxx0pKm0jkEPF//sYIUPQt9/1N55sYYdRfcXBjwLhMaQdW7+1903MtlAHmfffPt/cHXL/c/fj8YJ8N014jwsJfU1dPqYoc22c70FcLPi01vrz+/mP1Nwb2wUnorAAP5xeyZf3FISq2TspwmgF9BrTQkgiVF05bDDKqGtaJtmG4F4Hyw5UXaRZpZzjGAPgGQT9Ww5tmih3YNMCy3ycxbYd17FMUQGmHcoiQo06kAyFNSKah5ttZbT4RhOU3xPgXuZkY+rWi8MwPatYgVKTNuoe4NdUxlFopNAjLCCKDXQb34UhfQ5ipr4RigPjIsZ42QiLh8FIUQQZkLTISGMujFxUZxT+NohAF7KdtsB4dtxjr1FNycH/Cu9JjYSCRaxYJGoxYrJxeJgO5ntHlEKRqPBklNOdsgTDC4HNZKc0mxxH+tigZJma9WU0jNgrAT1rzJZFKRFtXBGaGdIVU4qywfJYJKYn9+OduCvwHGCAOtsF7qFctkHTroMtJMepkIOGHCfsxmlIHB+H3Hr5Umo2HX2XoTE5F6bDf3N+B5IllnZOKkVlvWWWHlfEOvs2ywZP0D4J4kVhirVJwAAAAASUVORK5CYII&#x3D;" />
+            <a target="_blank" href="https://www.virtru.com">virtru.com</a>
+          </span>
+          <ul class="keywords">
+            <li>backbone</li>
+            <li>browser extensions</li>
+            <li>jwt</li>
+            <li>webpack</li>
+            <li>express</li>
+            <li>node.js</li>
+            <li>spirit</li>
+          </ul>
+          <div class="item" id="work-item">
+            <ul class="highlights">
+              <li><p><p>Led development of Google Vault Extension and Google Drive file proxy service acting as a model for future projects</p></p></li>
+              <li><p><p>Refactored and helped develop VJWT, a JWT spec with enhanced security features</p></p></li>
+              <li><p><p>Integrated in a FIPS compliant crypto library to meet the security needs of customers</p></p></li>
+              <li><p><p>Managed and mentored team members and contractors as a tech lead</p></p></li>
+              <li><p><p>Rewrote and extended key parts of the DLP rules engine, key to Virtru's success, and enhanced handling of complex violations</p></p></li>
+              <li><p><p>Developed voltron to allow for building a single extension from multiple independent repos</p></p></li>
+              <li><p><p>Created new OU functionality that included new db schema, associated documentation for schema changes, API updates, frontend architecture improvements, CSS and associated templates</p></p></li>
+              <li><p><p>Improved our Secure Reader loading performance, reduced bugs, and added a whitelabeling solution</p></p></li>
+              <li><p><p>Ran our knowledge sharing sessions</p></p></li>
+              <li><p><p>Led second round technical interviews</p></p></li>
+              <li><p><p>Contributed to several open source projects eslint, webpack, spirit-js, and more</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+            <label for="work-item-6"></label>
+    
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Jun 2012</span>
+                <span class="endDate">- Jan 2015</span>
+              </div>
+              <div class="position">UI/Software Engineer</div>
+                <div class="company">SPARC (acquired by Booz Allen Hamilton)</div>
+            </header>
+    
+            <span class="location">
+              <span class="fas fa-map-marker-alt"></span>
+                <span class="location">Charleston, SC</span>
+            </span>
+          <span class="url">
+              <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://www.linkedin.com/company/sparc-llc">linkedin.com/company/sparc-llc</a>
+          </span>
+          <ul class="keywords">
+            <li>mongodb</li>
+            <li>angularjs</li>
+            <li>asp.net-web-api2</li>
+            <li>bootstrap</li>
+            <li>c#</li>
+            <li>ejs</li>
+            <li>express</li>
+            <li>git</li>
+            <li>github</li>
+            <li>gulp</li>
+            <li>jade</li>
+            <li>javascript</li>
+            <li>jquery</li>
+            <li>less</li>
+            <li>mongoose</li>
+            <li>mysql</li>
+            <li>node.js</li>
+            <li>react</li>
+            <li>servicestack</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p><p>Worked on in house products and outsourced products</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Led the second phase of new feature development for OpsAssure, a scheduling and task management app</p></p></li>
+              <li><p><p>Handled all video player development and on Stre.am, which led to contributions to video.js</p></p></li>
+              <li><p><p>Architected, implemented, launched, and maintained a product for Core Care Medical</p></p></li>
+              <li><p><p>Contributed to new architecture decisions, refactored crucial code, and ported MySQL to MongoDB on 520</p></p></li>
+              <li><p><p>Mentored and taught a QA JavaScript and automation</p></p></li>
+              <li><p><p>Rapidly learnt and contributed to 520 ensuring a successful release to the VA, while providing mentoring and support to others</p></p></li>
+              <li><p><p>Filled the role of domain expert for Stre.am</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Sep 2010</span>
+                <span class="endDate">- Jun 2012</span>
+              </div>
+              <div class="position">Interface Engineer II</div>
+                <div class="company">PeopleMatter (acquired by Snagajob)</div>
+            </header>
+    
+            <span class="location">
+              <span class="fas fa-map-marker-alt"></span>
+                <span class="location">Charleston, SC</span>
+            </span>
+          <span class="url">
+              <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://www.linkedin.com/company/peoplematter">linkedin.com/company/peoplematter</a>
+          </span>
+          <ul class="keywords">
+            <li>c#</li>
+            <li>javascript</li>
+            <li>squishit</li>
+            <li>asp.net</li>
+            <li>css</li>
+            <li>css-sprites</li>
+            <li>css3</li>
+            <li>html5</li>
+            <li>jquery</li>
+            <li>less</li>
+            <li>tfs</li>
+          </ul>
+          <div class="item" id="work-item">
+            <ul class="highlights">
+              <li><p><p>One of two interface engineers responsible for frontend development</p></p></li>
+              <li><p><p>Implemented SquishIt, an open source JavaScript &amp; CSS minifier, and created a higher level abstraction to streamline internal use</p></p></li>
+              <li><p><p>Learnt, introduced, and used LESS through Chirpy to improve readability and maintainability of CSS</p></p></li>
+              <li><p><p>Refactored and fixed several open source projects used internally, including SquishIt</p></p></li>
+              <li><p><p>Actively developed cross-browser compatible styling in IE7 through IE9, Safari, Firefox, and Chrome</p></p></li>
+              <li><p><p>Architected css architecture and hierarchy alongside general JavaScript practices for the frontend</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+            <label for="work-item-8"></label>
+    
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Jun 2007</span>
+                <span class="endDate">- Sep 2010</span>
+              </div>
+              <div class="position">Software Engineer II</div>
+                <div class="company">Blackbaud</div>
+            </header>
+    
+            <span class="location">
+              <span class="fas fa-map-marker-alt"></span>
+                <span class="location">Charleston, SC</span>
+            </span>
+          <span class="url">
+              <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAp9JREFUOE9Vk0tIlFEUx//n+2Z8zEsyMRUZe/gEGzKCgrTARUZKi2gjLpQWE9UipUiEolVQaRpRi6I2ERgGQaFQQoG0qMCFzYTjIyfQSpMUmxm1eX0n7r3zOXoW33e55/7/95x7f5cgguQXxACL/9jvY4ycRjKoDAQG8TfGyhDtKxgWeTOISEmVnmD1j3oSycIPBHLJhSJhKuSYQxZ9vi6294DPTJNYJXKa39eigZ4xixmlYlXP5j3lOGHkNaCmYFikZTbDP+phrH1Roq2SzSWrzZStFTPuf54zc8rg6+AMA7vFuCnTibbcYpxeCACsetgwJdGF2oCAYKy6aQ9l+EY9rE/L3UWcsxfhWlENCqdfyNVE9vQxSLWqQdSiG+tuyh7vbU+wq0+Wz8BZZx6uF9bjY2gRxVkWPFkaw6PIH+Wu9BuGVi3cQVmB3ocEq1dMxzkKr70cD9wn0b/0GYvJVVzMr8eF2VdYMdYwsP5T+lgpK+W23C0NEpz0miB4bRXoLDiMnTP3ZKF3c4+gzlGK1vl++EuvoOX7cwxEf6SM1rspe7yvXdMjsoVVI47ztv3o3FGLkuBNCFD6th1HraMUVxde42lJG5pnH+NdbAV2ssBgRwc5J7oqDVgDwmCNgWrdBl9ZJ96GxrAcj6J5+0GcCN4HM+NNfA5ANmySHiAZ2+WWQ8dk1wQYFeKAwkYM1XoeevIbZJ+3l0bwPvZLnrBDy5S8KyhpMlJ1o1Jy4JzsqmSOB0TJ4ooiRhpwYeLQ0kxLbhlIxKtMkFTSNXW50WAaNEnbwmMKHsUVQ9PRFCrrGUoBlUZdVoL4CIB8BW3q8oVSPFVgkWA5Gq64NUGpp5t6TApXM3KmLh2KGq5TFoQl3gk4gpla+OXf8juf1HUTiJXmP9Y1Du4qs1gNAAAAAElFTkSuQmCC" />
+            <a target="_blank" href="https://blackbaud.com">blackbaud.com</a>
+          </span>
+          <ul class="keywords">
+            <li>asp.net</li>
+            <li>css</li>
+            <li>javascript</li>
+            <li>jquery</li>
+            <li>sql</li>
+            <li>tfs</li>
+            <li>vb.net</li>
+            <li>visual-studio</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p><p>First batch of engineering hires from RIT leading to additional RIT new grad hires</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Acted as a JavaScript mentor, reviewing code as it was checked in and advocating best practices</p></p></li>
+              <li><p><p>Took over as lead developer and improved our e-commerce product in multiple areas</p></p></li>
+              <li><p><p>Created an extensible shopping cart framework, used across teams &amp; products, as the basis for all payment processing</p></p></li>
+              <li><p><p>Exclusively handled production issues, such as data corruption, experienced by clients for five months</p></p></li>
+              <li><p><p>Developed and implemented brand new functionality with server-side code, client-side code, and SQL</p></p></li>
+              <li><p><p>Introduced jQuery, leading to cleaner, more compatible code for the product</p></p></li>
+              <li><p><p>Led the Web Accessibility Initiative to support the needs of our clients</p></p></li>
+              <li><p><p>Learnt and used VB.Net and ASP.Net successfully without any previous experience with either</p></p></li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+    	<header>
+    		<h2 class='section-title'>Skills</h2>
+    	</header>
+    	<section id="skills">
+    		<div class="item">
+    			<h3 class="name">
+    				Programming Languages
+    			</h3>
+    			<ul class="keywords">
+    				<li>JavaScript</li>
+    				<li>TypeScript</li>
+    				<li>C#</li>
+    				<li>Elixir</li>
+    				<li>Elm</li>
+    				<li>Python</li>
+    				<li>VB.NET</li>
+    				<li>Ruby</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Frontend Engineering
+    			</h3>
+    			<ul class="keywords">
+    				<li>React</li>
+    				<li>valtio</li>
+    				<li>Solidjs</li>
+    				<li>redux</li>
+    				<li>jQuery</li>
+    				<li>Browser extensions</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Styling
+    			</h3>
+    			<ul class="keywords">
+    				<li>CSS</li>
+    				<li>SASS</li>
+    				<li>Tailwind/Uno CSS</li>
+    				<li>styled-components</li>
+    				<li>less</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Backend Engineering
+    			</h3>
+    			<ul class="keywords">
+    				<li>GraphQL</li>
+    				<li>AppSync</li>
+    				<li>Node.js</li>
+    				<li>ASP.NET MVC</li>
+    				<li>REST APIs</li>
+    				<li>MongoDB</li>
+    				<li>SQL Server</li>
+    				<li>JWT</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Tools
+    			</h3>
+    			<ul class="keywords">
+    				<li>vite</li>
+    				<li>vitest</li>
+    				<li>Jest</li>
+    				<li>Webpack</li>
+    				<li>esbuild</li>
+    				<li>ESLint</li>
+    				<li>Prettier</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Git &amp; CI/CD
+    			</h3>
+    			<ul class="keywords">
+    				<li>GitHub</li>
+    				<li>GitHub Actions</li>
+    				<li>Bitbucket</li>
+    				<li>Bitbucket Pipelines</li>
+    				<li>CircleCI</li>
+    				<li>Buildkite</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				AWS
+    			</h3>
+    			<ul class="keywords">
+    				<li>Cloudfront</li>
+    				<li>SST</li>
+    				<li>Lambda</li>
+    				<li>S3</li>
+    				<li>Secrets Manager</li>
+    				<li>Serverless Framework</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Cloudflare
+    			</h3>
+    			<ul class="keywords">
+    				<li>Pages</li>
+    				<li>Workers</li>
+    				<li>D1</li>
+    			</ul>
+    		</div>
+    	</section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Education <span class="item-count">(1)</span></h2>
+      </header>
+    
+      <section id="education">
+        <section class="education-item">
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">
+              2003
+              </span>
+              <span class="endDate">
+              - 2007
+              </span>
+            </div>
+            <div class="header-left">
+              <div class="studyType">
+                BS
+              </div>
+              <div class="area">
+                Information Technology New Media
+              </div>
+              <div class="institution">
+                Rochester Institute of Technology
+              </div>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+          </div>
+        </section>
+      </section>
+    </section>
+
+  </body>
+</html>
